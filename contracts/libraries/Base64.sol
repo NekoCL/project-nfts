@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 
+<<<<<<< HEAD
 pragma solidity ^0.8.1;
+=======
+pragma solidity ^0.8.0;
+>>>>>>> refs/remotes/origin/main
 
 /// [MIT License]
 /// @title Base64

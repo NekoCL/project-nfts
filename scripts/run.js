@@ -1,4 +1,5 @@
 const main = async () => {
+<<<<<<< HEAD
     const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
     const gameContract = await gameContractFactory.deploy(
       ["Asuka", "Shinji", "Rei"],       // Names
@@ -34,6 +35,23 @@ const main = async () => {
     let returnedTokenUri = await gameContract.tokenURI(1);
     console.log("Token URI:", returnedTokenUri);
 
+=======
+    const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
+    const nftContract = await nftContractFactory.deploy();
+    await nftContract.deployed();
+    console.log("Contract deployed to:", nftContract.address);
+  
+    // Call the function.
+    let txn = await nftContract.makeAnEpicNFT()
+    // Wait for it to be mined.
+    await txn.wait()
+  
+    // Mint another NFT for fun.
+    txn = await nftContract.makeAnEpicNFT()
+    // Wait for it to be mined.
+    await txn.wait()
+  
+>>>>>>> refs/remotes/origin/main
   };
   
   const runMain = async () => {
